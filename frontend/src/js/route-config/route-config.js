@@ -137,6 +137,17 @@
             authenticate: true
         };
 
+        var partcipated_challenges = {
+            name: "web.participated-challenge",
+            parent: "web",
+            url: "/participated-challenges",
+            templateUrl: baseUrl + "/web/participated-challenges.html",
+            controller: 'ParticipatedChallengesCtrl',
+            controllerAs: 'participatedChallenges',
+            title: 'Participated Challenges',
+            authenticate: true
+        };
+
         var host_analytics = {
             name: "web.host-analytics",
             parent: "web",
@@ -469,6 +480,8 @@
         $stateProvider.state(host_analytics);
         $stateProvider.state(teams);
         $stateProvider.state(hosted_challenges);
+        $stateProvider.state(partcipated_challenges);
+
 
         // challenge host teams
         $stateProvider.state(challenge_host_teams);
